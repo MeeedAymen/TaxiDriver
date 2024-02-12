@@ -22,3 +22,18 @@ Route::get('/signup', function(){
     return view('Signup');
 })->name('signup');
 
+Route::get('/admin', function(){
+    return view('admin');
+})->name('admin');
+
+Route::get('/user', function(){
+    return view('user');
+})->name('user');
+
+Route::get('/alldrivers', function(){
+    return view('alldrivers');
+})->name('alldrivers');
+
+Route::get('/allpassangers', function(){
+    return view('allpassangers');
+})->name('allpassangers');
