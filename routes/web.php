@@ -37,3 +37,12 @@ Route::get('/alldrivers', function(){
 Route::get('/allpassangers', function(){
     return view('allpassangers');
 })->name('allpassangers');
+
+Route::get('/adminprofil', function(){
+    return view('adminprofil');
+})->name('adminprofil');
+
+Route::get('/MyProfil', function(){
+    return view('MyProfil');
+})->name('MyProfil');
+

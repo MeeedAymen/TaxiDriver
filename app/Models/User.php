@@ -19,9 +19,28 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'phone',
         'email',
         'password',
+        'profil_picture',
+        'description',
+        'matricule',
+        'vehicule_type',
     ];
+
+    public function traject(){
+        return $this->hasMany(traject::class);
+    }
+     public function reservation(){
+        return $this->hasMany(reservation::class);
+    }
+
+    public function ratings()
+    {
+        return $this->belongsToMany(User::class, 'ratings', 'passenger_id', 'driver_id')
+            ->withPivot('rating')
+            ->withTimestamps();
+    }
 
     /**
      * The attributes that should be hidden for serialization.
